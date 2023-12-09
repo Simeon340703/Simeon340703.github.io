@@ -1,3 +1,37 @@
+/* Add this at the top of your stylesheet.css */
+/* Style the navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333; /* Change this color to match your site */
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2; /* This is the font color */
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd; /* Change this color for hover effect */
+  color: black; /* Change text color for hover effect */
+}
+
+/* Responsive layout - makes the navigation bar look good on small screens */
+@media screen and (max-width: 600px) {
+  .topnav a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+
 /* latin-ext */
 @font-face {
   font-family: 'Lato';
