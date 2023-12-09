@@ -171,3 +171,42 @@ name {
 span.highlight {
   background-color: #ffffd0;
 }
+/* Existing CSS rules */
+/* ... Your existing CSS ... */
+
+/* Style for publication entries */
+.publication-entry {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; /* Space between entries */
+  padding: 10px; /* Padding around each entry */
+  border-bottom: 1px solid #ddd; /* Optional bottom border */
+}
+
+.publication-entry img {
+  margin-right: 15px; /* Space between image and text */
+  border-radius: 5px; /* Optional rounded corners for images */
+}
+
+.publication-info {
+  flex-grow: 1;
+}
+
+.publication-info h3 {
+  margin-top: 0;
+  color: #1772d0; /* Title color */
+  font-size: 18px; /* Title font size */
+}
+
+.publication-info p {
+  margin: 5px 0; /* Space between paragraphs */
+  font-size: 14px; /* Font size for other text */
+}
+
+.publication-info em {
+  font-style: italic;
+  color: #555; /* Color for conference/journal info */
+}
+
+/* ... Any additional CSS rules ... */
+
