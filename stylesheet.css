@@ -210,3 +210,7 @@ span.highlight {
 
 /* ... Any additional CSS rules ... */
 
+span.name {
+  font-size: 32px;
+  /* other styling as needed */
+}
