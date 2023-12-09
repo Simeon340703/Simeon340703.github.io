@@ -1,4 +1,3 @@
-/* Add this at the top of your stylesheet.css */
 /* Style the navigation bar */
 .topnav {
   overflow: hidden;
@@ -11,9 +10,15 @@
   display: block;
   color: #f2f2f2; /* This is the font color */
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px 20px; /* Increased the padding for more space */
+  margin-right: 10px; /* Added margin for additional space between buttons */
   text-decoration: none;
   font-size: 17px;
+}
+
+/* Add a right margin to all but the last item to add spacing */
+.topnav a:not(:last-child) {
+  margin-right: 20px; /* Adjust the space between the buttons */
 }
 
 /* Change the color of links on hover */
@@ -21,6 +26,9 @@
   background-color: #ddd; /* Change this color for hover effect */
   color: black; /* Change text color for hover effect */
 }
+
+
+
 
 /* Responsive layout - makes the navigation bar look good on small screens */
 @media screen and (max-width: 600px) {
