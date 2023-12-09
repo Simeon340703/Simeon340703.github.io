@@ -214,3 +214,42 @@ span.name {
   font-size: 32px;
   /* other styling as needed */
 }
+
+heading {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  color: #333; /* Adjust the color as needed */
+  margin-bottom: 20px;
+}
+p {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #666; /* Adjust the color as needed */
+  line-height: 1.6; /* Adjust line spacing */
+  margin-bottom: 20px;
+}
+table {
+  width: 100%;
+  max-width: 800px; /* Adjust as needed */
+  border-collapse: collapse;
+  margin: 0 auto; /* Center the table */
+}
+
+td {
+  padding: 20px;
+  vertical-align: top; /* Adjust as needed */
+}
+a {
+  color: #1772d0; /* Adjust the color as needed */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #f09228; /* Adjust for hover effect */
+  text-decoration: underline;
+}
+strong {
+  font-weight: bold;
+}
+
