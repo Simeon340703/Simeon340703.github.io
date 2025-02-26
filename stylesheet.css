@@ -80,11 +80,23 @@ a:hover {
   font-weight: 500;
 }
 
+.intro {
+  display: flex;
+  flex-direction: row-reverse; /* Image on the left, text on the right */
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
 .profile-image img {
   width: 100%;
   max-width: 300px;
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.intro-text {
+  max-width: 60%; /* Adjust as needed */
 }
 
 /* Publications Section */
