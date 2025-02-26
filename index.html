@@ -6,73 +6,64 @@
   <meta name="author" content="Simegnew Yihunie Alaba">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
- <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🌐%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🌐%3C/text%3E%3C/svg%3E">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Navigation Menu -->
-  <div class="topnav">
+  <nav class="topnav">
     <a href="#home">Home</a>
     <a href="#accomplishments">Accomplishments</a>
     <a href="#blog">Blog</a>
     <a href="#projects">Projects</a>
     <a href="#publications">Publications</a>
-    <!-- Additional links can be added here -->
-  </div>
+  </nav>
 
   <!-- Home Section -->
-  <div id="home">
-    <!-- Name and Introduction -->
-    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-    <tr style="padding:0px">
-      <td style="padding:0px">
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr style="padding:0px">
-            <td style="padding:2.5%;width:63%;vertical-align:middle">
-            <p style="text-align:center">
-           <span class="name">Simegnew Yihunie Alaba</span>
-           </p>
+  <section id="home" class="section">
+    <div class="container">
+      <div class="intro">
+        <div class="intro-text">
+          <h1 class="name">Simegnew Yihunie Alaba</h1>
+          <p class="bio">
+            Before starting my Ph.D. journey, I earned a Bachelor's degree in Electrical Engineering and a Master's in Computer Engineering.
+            I completed my Ph.D. in Electrical and Computer Engineering at Mississippi State University in May 2024. 
+            My research focuses on computer vision, deep learning, machine learning, and autonomous driving.
+            I am committed to fostering cross-disciplinary collaborations, leveraging state-of-the-art techniques, and remaining 
+            at the forefront of research to drive engineering and artificial intelligence advancements.
+          </p>
+          <div class="social-links">
+            <a href="mailto:simonyhunie@gmail.com" class="social-link">Email</a>
+            <a href="https://scholar.google.com/citations?user=pqLEybcAAAAJ&hl=en&authuser=1" class="social-link">Google Scholar</a>
+            <a href="https://github.com/Simeon340703/" class="social-link">Github</a>
+            <a href="https://www.linkedin.com/in/simegnew-y-alaba" class="social-link">LinkedIn</a>
+            <a href="https://sites.google.com/view/simegnew/courses-and-certificates?authuser=0" class="social-link">Certificates</a>
+          </div>
+        </div>
+        <div class="profile-image">
+          <img src="images/sim_dev_1.jpg" alt="Profile Photo" class="hoverZoomLink">
+        </div>
+      </div>
+    </div>
+  </section>
 
-              <p>Before starting my Ph.D. journey, I earned a Bachelor's degree in Electrical Engineering and a Master's in Computer Engineering.
-		I completed my Ph.D. in Electrical and Computer Engineering at Mississippi State University in May 2024. 
-		My research focuses on computer vision, deep learning, machine learning, and autonomous driving.
-                I am committed to fostering cross-disciplinary collaborations, leveraging state-of-the-art techniques, and remaining 
-		at the forefront of research to drive engineering and artificial intelligence advancements. Passionate about sharing my 
-		discoveries, insights, and enthusiasm, I am excited to explore the realms of computer vision, deep learning, and autonomous 
-		systems further.
-              </p>
-              
-              <p style="text-align:center">
-                <a href="mailto:simonyhunie@gmail.com">Email</a> &nbsp/&nbsp
-                <a href="https://scholar.google.com/citations?user=pqLEybcAAAAJ&hl=en&authuser=1">Google Scholar</a> &nbsp/&nbsp
-                <a href="https://github.com/Simeon340703/">Github</a> &nbsp/&nbsp
-                <a href="https://www.linkedin.com/in/simegnew-y-alaba">LinkedIn</a> &nbsp/&nbsp
-		<a href="https://sites.google.com/view/simegnew/courses-and-certificates?authuser=0">Certificates and Courses</a>
-              </p>
-            </td>
-            <td style="padding:2.5%;width:40%;max-width:40%">
-              <a href="images/sim_dev_1.jpg"><img style="width:100%;max-width:100%" alt="profile photo" src="images/sim_dev_1.jpg" class="hoverZoomLink"></a>
-            </td>
-          </tr>
-        </tbody></table>
-    <!-- Accomplishments and other home-related content -->
-    <!-- ... Other content ... -->
-  </div>
-
-<!-- Publications Section -->
-<div id="publications">
-  <heading>Research</heading>
-  <p>Representative papers are <span class="highlight">highlighted</span>.</p>
-
-	  <!-- Transformer-Based Optimized Multimodal Fusion for 3D Object Detection in Autonomous Driving-->
-  <div class="publication-entry">
-    <img src="images/Multimodal.png"  alt="safs_small" width="220" height="140" style="border-style: none">
-    <div class="publication-info">
-      <a href="https://ieeexplore.ieee.org/abstract/document/10493018">
-        <h3>Transformer-Based Optimized Multimodal Fusion for 3D Object Detection in Autonomous Driving</h3>
-      </a>
-      <p><strong>Simegnew Alaba </strong> and John E. Ball</p>
-      <p><em>IEEE Access,  April 5,</em>, 2024</p>
-      <p>3D object detection is crucial for autonomous driving, providing a detailed perception of the environment
+  <!-- Publications Section -->
+  <section id="publications" class="section">
+    <div class="container">
+      <h2>Research</h2>
+      <p class="subtitle">Representative papers are <span class="highlight">highlighted</span>.</p>
+      <div class="publication-list">
+        <!-- Publication Entries -->
+        <div class="publication-entry">
+          <img src="images/Multimodal.png" alt="Multimodal Fusion">
+          <div class="publication-info">
+            <a href="https://ieeexplore.ieee.org/abstract/document/10493018">
+              <h3>Transformer-Based Optimized Multimodal Fusion for 3D Object Detection in Autonomous Driving</h3>
+            </a>
+            <p><strong>Simegnew Alaba</strong> and John E. Ball</p>
+            <p><em>IEEE Access, April 5, 2024</em></p>
+            <p>3D object detection is crucial for autonomous driving, providing a detailed perception of the environment
 	through multiple sensors. Cameras excel at capturing color and texture but struggle with depth and under adverse weather
 	or lighting conditions. LiDAR sensors offer accurate depth information but lack visual detail. To overcome these limitations, 
 	this work introduces a multimodal fusion model that combines data from LiDAR and cameras for improved 3D object detection.
@@ -339,68 +330,70 @@
 
   </div>
 
+  <!-- Blog Section -->
+  <section id="blog" class="section">
+    <div class="container">
+      <h2>Blog</h2>
+      <div class="blog-list">
+        <div class="blog-entry">
+          <a href="https://medium.com/@simonyihunie/a-complete-guide-to-point-cloud-processing-c3fe1c22e28f">A Complete Guide to Point Cloud Processing</a>
+        </div>
+        <div class="blog-entry">
+          <a href="https://medium.com/@simonyihunie/a-comprehensive-guide-to-attention-mechanisms-in-cnns-from-intuition-to-implementation-7a40df01a118">A Comprehensive Guide to Attention Mechanisms in CNNs: From Intuition to Implementation</a>
+        </div>
+        <div class="blog-entry">
+          <a href="https://medium.com/@simonyihunie/installing-intel-realsense-d435i-camera-on-nvidia-jetson-orin-nx-step-by-step-guide-2ef420483064">Installing Intel RealSense D435i Camera on Nvidia Jetson Orin NX: Step-by-Step Guide</a>
+        </div>
+        <div class="blog-entry">
+          <a href="https://medium.com/@simonyihunie/arrays-vs-vectors-in-modern-c-a-detailed-comparison-with-examples-b797fefff7f7">Arrays vs. Vectors in Modern C++: A Detailed Comparison with Examples</a>
+        </div>
+        <div class="blog-entry">
+          <a href="https://medium.com/@simonyihunie/introduction-to-vision-transformers-8adcf4cd9a20">Introduction to Vision Transformers</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- Other sections like Curriculum, Blog, and Projects -->
-	  <!-- Blog Section -->
-       <div id="blog">
-	<h2>Blog</h2>
-	       
-	<div class="blog-entry">
-	  <a href="https://medium.com/@simonyihunie/a-complete-guide-to-point-cloud-processing-c3fe1c22e28f">A Complete Guide to Point Cloud Processing</a>
-	</div> <br><br>
+  <!-- Accomplishments Section -->
+  <section id="accomplishments" class="section">
+    <div class="container">
+      <h2>Accomplishments</h2>
+      <div class="accomplishment-list">
+        <div class="accomplishment-entry">
+          <p><strong>VOLUNTEER WORK</strong></p>
+          <p>
+            <strong>Science Fair Judge for high school students</strong>, Starkville, MS February 22, 2022, and March 7, 2023
+            <strong>Journal Reviewer</strong> January 2021 — Present
+            Serving as a reviewer for the IEEE Access journal, IEEE Sensors Journal, and IEEE Transactions on Intelligent Transportation Systems journal.
+          </p>
+        </div>
+        <div class="accomplishment-entry">
+          <p><strong>Recognized Works</strong></p>
+          <p>
+            Led a comprehensive workshop on image processing, machine learning, and deep learning for researchers and scientists from the United States Department of Agriculture (USDA).
+            The workshop took place from 10 to 14 January 2022. (Reference: <a href="https://www.gri.msstate.edu/research/ai-workshop/people.php">ECE news posted on Feb. 03, 2022</a>)
+            I conducted training on the Practical Atlas HPC application, focused on utilizing the Atlas GPU platform for deep learning applications, on June 08, 2022.
+            <strong>Recognized works at university student research</strong>:
+            <a href="https://www.datascience.msstate.edu/research/student-research">(a) Class-Aware Fish Species Recognition Using Deep Learning for an Imbalanced Dataset</a>
+            (b) WabileNet: Wavelet-Based Lightweight Feature Extraction Network
+          </p>
+        </div>
+        <div class="accomplishment-entry">
+          <p><strong>Professional Memberships</strong></p>
+          <p>
+            <a href="#">IEEE Memberships</a><br>
+            <a href="#">IEEE-Eta Kappa Nu (HKN) Memberships</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-
-	<div class="blog-entry">
-	  <a href="https://medium.com/@simonyihunie/a-comprehensive-guide-to-attention-mechanisms-in-cnns-from-intuition-to-implementation-7a40df01a118"> A Comprehensive Guide to Attention Mechanisms in CNNs: From Intuition to Implementation</a>
-	</div> <br><br>
-	       
-
-	       
-	<div class="blog-entry">
-	  <a href="https://medium.com/@simonyihunie/installing-intel-realsense-d435i-camera-on-nvidia-jetson-orin-nx-step-by-step-guide-2ef420483064"> Installing Intel RealSense D435i Camera on Nvidia Jetson Orin NX: Step-by-Step Guide</a>
-	</div> <br><br>
-
-	       
-	<div class="blog-entry">
-	  <a href="https://medium.com/@simonyihunie/arrays-vs-vectors-in-modern-c-a-detailed-comparison-with-examples-b797fefff7f7"> Arrays vs. Vectors in Modern C++: A Detailed Comparison with Examples</a>
-	</div> <br><br>
-
-	       
-	 <div class="blog-entry">
-	  <a href="https://medium.com/@simonyihunie/introduction-to-vision-transformers-8adcf4cd9a20"> Introduction to Vision Transformers</a>
-	  </div>
-       </div>
-		
-  <!-- These would be similar divs with respective ids and content -->
-<!-- Accomplishment Section -->
-<div id="accomplishments">
-  <h2>Accomplishments</h2>
-
-  <div class="accomplishment-entry">
-    <p><strong>VOLUNTEER WORK</strong></p>
-    <p>
-      <strong>Science Fair Judge for high school students</strong>, Starkville, MS February 22, 2022, and March 7, 2023
-      <strong>Journal Reviewer</strong> January 2021 — Present
-      Serving as a reviewer for the IEEE Access journal, IEEE Sensors Journal, and IEEE Transactions on Intelligent Transportation Systems journal.
-    </p>
-
-    <p><strong>Recognized Works</strong></p>
-    <p>
-      Led a comprehensive workshop on image processing, machine learning, and deep learning for researchers and scientists from the United States Department of Agriculture (USDA).
-	The workshop took place from 10 to 14 January 2022. (Reference: <a href="https://www.gri.msstate.edu/research/ai-workshop/people.php">ECE news posted on Feb. 03, 2022</a>)
-      I conducted training on the Practical Atlas HPC application, focused on utilizing the Atlas GPU platform for deep learning applications, on June 08, 2022.
-      <strong>Recognized works at university student research</strong>:
-      <a href="https://www.datascience.msstate.edu/research/student-research">(a) Class-Aware Fish Species Recognition Using Deep Learning for an Imbalanced Dataset</a>
-      (b) WabileNet: Wavelet-Based Lightweight Feature Extraction Network
-    </p>
-
-    <p><strong>Professional Memberships</strong></p>
-    <p>
-      <a href="#">IEEE Memberships</a><br>
-      <a href="#">IEEE-Eta Kappa Nu (HKN) Memberships</a>
-    </p>
-  </div>
-</div>
-
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Simegnew Yihunie Alaba. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
