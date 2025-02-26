@@ -1,119 +1,8 @@
-/* Style the navigation bar */
-.topnav {
-  overflow: hidden;
-  background-color: #333; /* Change this color to match your site */
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2; /* This is the font color */
-  text-align: center;
-  padding: 14px 20px; /* Increased the padding for more space */
-  margin-right: 10px; /* Added margin for additional space between buttons */
-  text-decoration: none;
-  font-size: 17px;
-}
-
-/* Add a right margin to all but the last item to add spacing */
-.topnav a:not(:last-child) {
-  margin-right: 20px; /* Adjust the space between the buttons */
-}
-
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #ddd; /* Change this color for hover effect */
-  color: black; /* Change text color for hover effect */
-}
-
-
-
-
-/* Responsive layout - makes the navigation bar look good on small screens */
-@media screen and (max-width: 600px) {
-  .topnav a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-}
-
-
-/* latin-ext */
-@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHjxsAUi-qNiXg7eU0.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHjxsAXC-qNiXg7Q.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 700;
-  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_FQftx9897sxZ.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 700;
-  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_Gwftx9897g.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjxAwXiWtFCfQ7A.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjx4wXiWtFCc.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwaPGQ3q5d0N7w.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-a {
-  color: #1772d0;
-  text-decoration: none;
-}
-
-a:focus,
-a:hover {
-  color: #f09228;
-  text-decoration: none;
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body,
@@ -121,135 +10,218 @@ td,
 th,
 tr,
 p,
-a {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px
-}
-
-strong {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
-}
-
-heading {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 22px;
-}
-
-papertitle {
+a,
+strong,
+heading,
+papertitle,
+span.name {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 14px;
-  font-weight: 700
+  color: #444;
+  line-height: 1.6;
 }
 
-name {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+/* Navigation Bar (Converted to Flexbox) */
+.topnav {
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: center;
+  background-color: #333;
+  padding: 0.5rem 1rem;
+}
+
+.topnav a {
+  display: block;
+  color: #f2f2f2;
+  padding: 14px 20px;
+  margin-right: 20px;
+  text-decoration: none;
+  font-size: 17px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Responsive Navigation */
+@media screen and (max-width: 600px) {
+  .topnav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .topnav a {
+    margin: 5px 0;
+  }
+}
+
+/* Hero / Home Section */
+#home {
+  background: #e9f5ff;
+  padding: 4rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#home .home-container {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#home .home-text,
+#home .home-image {
+  flex: 1 1 45%;
+  margin: 1rem;
+}
+
+#home .home-text h1 {
   font-size: 32px;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
-.one {
-  width: 160px;
-  height: 160px;
-  position: relative;
+#home .home-text p {
+  margin-bottom: 1rem;
+  text-align: justify;
 }
 
-.two {
-  width: 160px;
-  height: 160px;
-  position: absolute;
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
+/* Contact Links in Home */
+#home .contact-links {
+  text-align: center;
+  margin-top: 1.5rem;
 }
 
-.fade {
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
+#home .contact-links a {
+  margin: 0 10px;
+  color: #1772d0;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
-span.highlight {
-  background-color: #ffffd0;
+#home .contact-links a:hover {
+  color: #f09228;
 }
-/* Existing CSS rules */
-/* ... Your existing CSS ... */
 
-/* Style for publication entries */
+/* Profile Image Styling */
+#home .home-image img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Section Container (for Publications, Blog, Accomplishments, Projects, etc.) */
+.section {
+  background: #fff;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Publications Section */
 .publication-entry {
   display: flex;
-  align-items: center;
-  margin-bottom: 20px; /* Space between entries */
-  padding: 10px; /* Padding around each entry */
-  border-bottom: 1px solid #ddd; /* Optional bottom border */
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
 }
 
 .publication-entry img {
-  margin-right: 15px; /* Space between image and text */
-  border-radius: 5px; /* Optional rounded corners for images */
+  margin-right: 15px;
+  border-radius: 5px;
+  width: 220px;
+  height: auto;
 }
 
 .publication-info {
-  flex-grow: 1;
+  flex: 1;
 }
 
 .publication-info h3 {
-  margin-top: 0;
-  color: #1772d0; /* Title color */
-  font-size: 18px; /* Title font size */
+  margin: 0 0 0.5rem 0;
+  color: #1772d0;
+  font-size: 18px;
 }
 
 .publication-info p {
-  margin: 5px 0; /* Space between paragraphs */
-  font-size: 14px; /* Font size for other text */
+  margin: 5px 0;
+  font-size: 14px;
 }
 
 .publication-info em {
   font-style: italic;
-  color: #555; /* Color for conference/journal info */
+  color: #555;
 }
 
-/* ... Any additional CSS rules ... */
-
-span.name {
-  font-size: 32px;
-  /* other styling as needed */
+/* Blog Section */
+.blog-section .blog-entry {
+  margin-bottom: 1.5rem;
+  font-size: 16px;
 }
 
-heading {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 22px;
-  font-weight: bold;
-  color: #333; /* Adjust the color as needed */
-  margin-bottom: 20px;
+.blog-section .blog-entry a {
+  color: #1772d0;
+  transition: color 0.3s ease;
 }
-p {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
-  color: #666; /* Adjust the color as needed */
-  line-height: 1.6; /* Adjust line spacing */
-  margin-bottom: 20px;
+
+.blog-section .blog-entry a:hover {
+  color: #f09228;
 }
+
+/* Accomplishments Section */
+#accomplishments {
+  padding: 2rem;
+  background: #fff;
+  margin: 2rem auto;
+  max-width: 1200px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+#accomplishments h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.accomplishment-entry p {
+  margin-bottom: 1rem;
+}
+
+/* Table Styling (if still in use) */
 table {
   width: 100%;
-  max-width: 800px; /* Adjust as needed */
+  max-width: 800px;
   border-collapse: collapse;
-  margin: 0 auto; /* Center the table */
+  margin: 0 auto;
 }
 
 td {
   padding: 20px;
-  vertical-align: top; /* Adjust as needed */
-}
-a {
-  color: #1772d0; /* Adjust the color as needed */
-  text-decoration: none;
+  vertical-align: top;
 }
 
+/* Hover Effects for Links */
+a:focus,
 a:hover {
-  color: #f09228; /* Adjust for hover effect */
+  color: #f09228;
   text-decoration: underline;
 }
-strong {
-  font-weight: bold;
-}
 
+/* Utility Classes */
+span.highlight {
+  background-color: #ffffd0;
+}
