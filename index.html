@@ -1,98 +1,84 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
   <title>Simegnew Yihunie Alaba</title>
   <meta name="author" content="Simegnew Yihunie Alaba">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="stylesheet.css">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🌐%3C/text%3E%3C/svg%3E">
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Navigation Menu -->
-  <nav class="topnav">
-    <a href="#home">Home</a>
-    <a href="#accomplishments">Accomplishments</a>
-    <a href="#blog">Blog</a>
-    <a href="#projects">Projects</a>
-    <a href="#publications">Publications</a>
-  </nav>
 
-  <!-- Home Section -->
-  <section id="home" class="section">
-    <div class="container">
-      <div class="intro">
-        <div class="intro-text">
-          <h1 class="name">Simegnew Yihunie Alaba</h1>
-          <p class="bio">
-            Before starting my Ph.D. journey, I earned a Bachelor's degree in Electrical Engineering and a Master's in Computer Engineering.
-            I completed my Ph.D. in Electrical and Computer Engineering at Mississippi State University in May 2024. 
-            My research focuses on computer vision, deep learning, machine learning, and autonomous driving.
-            I am committed to fostering cross-disciplinary collaborations, leveraging state-of-the-art techniques, and remaining 
-            at the forefront of research to drive engineering and artificial intelligence advancements.
-          </p>
-          <div class="social-links">
-            <a href="mailto:simonyhunie@gmail.com" class="social-link">Email</a>
-            <a href="https://scholar.google.com/citations?user=pqLEybcAAAAJ&hl=en&authuser=1" class="social-link">Google Scholar</a>
-            <a href="https://github.com/Simeon340703/" class="social-link">Github</a>
-            <a href="https://www.linkedin.com/in/simegnew-y-alaba" class="social-link">LinkedIn</a>
+<!-- Header Section -->
+<header class="header-section py-5 text-center">
+  <div class="container">
+    <div class="profile-image mb-3">
+      <img src="images/sim_dev_1.jpg" alt="Profile Photo" class="rounded-circle border border-4 shadow-lg">
+    </div>
+    <h1 class="fw-bold">Simegnew Yihunie Alaba</h1>
+    <p class="email text-muted">simonyhunie [at] gmail [dot] com</p>
+    <div class="social-links mt-3">
+      <a href="mailto:simonyhunie@gmail.com" class="me-3">[Email]</a>
+      <a href="https://scholar.google.com/citations?user=pqLEybcAAAAJ&hl=en" class="me-3">[Google Scholar]</a>
+      <a href="https://github.com/Simeon340703/" class="me-3">[GitHub]</a>
+      <a href="https://www.linkedin.com/in/simegnew-y-alaba">[LinkedIn]</a>
+    </div>
+  </div>
+</header>
+
+<!-- About Section -->
+<section class="about-section py-5">
+  <div class="container">
+    <h2 class="fw-bold border-bottom pb-2">About</h2>
+    <p>
+      Before starting my Ph.D. journey, I earned a Bachelor's degree in Electrical Engineering and a Master's in Computer Engineering.
+      I completed my Ph.D. in Electrical and Computer Engineering at Mississippi State University in May 2024.
+      My research focuses on computer vision, deep learning, machine learning, and autonomous driving.
+      I am committed to fostering cross-disciplinary collaborations, leveraging state-of-the-art techniques, and remaining
+      at the forefront of research to drive engineering and artificial intelligence advancements.
+    </p>
+  </div>
+</section>
+
+<!-- Research Section -->
+<section id="publications" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="fw-bold border-bottom pb-2">Research</h2>
+    <p class="text-muted">Representative papers are <span class="highlight">highlighted</span>.</p>
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <div class="card shadow-sm">
+          <img src="images/Multimodal.png" class="card-img-top" alt="Multimodal Fusion">
+          <div class="card-body">
+            <h5 class="card-title">
+              <a href="https://ieeexplore.ieee.org/abstract/document/10493018">
+                Transformer-Based Optimized Multimodal Fusion for 3D Object Detection
+              </a>
+            </h5>
+            <p class="card-text"><strong>Simegnew Alaba</strong> and John E. Ball</p>
+            <p class="text-muted"><em>IEEE Access, April 5, 2024</em></p>
           </div>
         </div>
-        <div class="profile-image">
-          <img src="images/sim_dev_1.jpg" alt="Profile Photo" class="hoverZoomLink">
+      </div>
+
+      <div class="col-md-6 mb-4">
+        <div class="card shadow-sm">
+          <img src="images/wcam.png" class="card-img-top" alt="WCAM">
+          <div class="card-body">
+            <h5 class="card-title">
+              <a href="https://ieeexplore.ieee.org/document/10500182">WCAM: Wavelet Convolutional Attention Module</a>
+            </h5>
+            <p class="card-text"><strong>Simegnew Alaba</strong> and John E. Ball</p>
+            <p class="text-muted"><em>IEEE SoutheastCon, April 2024</em></p>
+          </div>
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- Publications Section -->
-  <section id="publications" class="section">
-    <div class="container">
-      <h2>Research</h2>
-      <p class="subtitle">Representative papers are <span class="highlight">highlighted</span>.</p>
-      <div class="publication-list">
-        <!-- Publication Entries -->
-        <div class="publication-entry">
-          <img src="images/Multimodal.png" alt="Multimodal Fusion">
-          <div class="publication-info">
-            <a href="https://ieeexplore.ieee.org/abstract/document/10493018">
-              <h3>Transformer-Based Optimized Multimodal Fusion for 3D Object Detection in Autonomous Driving</h3>
-            </a>
-            <p><strong>Simegnew Alaba</strong> and John E. Ball</p>
-            <p><em>IEEE Access, April 5, 2024</em></p>
-            <p>3D object detection is crucial for autonomous driving, providing a detailed perception of the environment
-	through multiple sensors. Cameras excel at capturing color and texture but struggle with depth and under adverse weather
-	or lighting conditions. LiDAR sensors offer accurate depth information but lack visual detail. To overcome these limitations, 
-	this work introduces a multimodal fusion model that combines data from LiDAR and cameras for improved 3D object detection.
-       The model transforms camera images and LiDAR point cloud data into a voxel-based representation and uses encoder networks to
-	enhance spatial interactions. A multiresolution attention module and discrete wavelet transforms are incorporated to improve feature extraction,
-	merging LiDAR's depth with the camera's texture and color details. The model also uses a transformer decoder network with self-attention and 
-	cross-attention for robust object detection through global interactions.
-	Advanced optimization techniques like pruning and Quantization-Aware Training (QAT) reduce memory and computational demands while maintaining 
-	performance. Testing on the nuScenes dataset demonstrates the model's effectiveness, providing competitive results and improved operational efficiency
-	in multimodal fusion 3D object detection.
-</p>
-    </div>
-  </div>  
-	
-  <!-- WCAM: Wavelet Convolutional Attention Module  -->
-  <div class="publication-entry">
-    <img src="images/wcam.png"  alt="safs_small" width="220" height="140" style="border-style: none">
-    <div class="publication-info">
-      <a href="https://ieeexplore.ieee.org/document/10500182">
-        <h3>WCAM: Wavelet Convolutional Attention Module </h3>
-      </a>
-      <p><strong>Simegnew Alaba </strong> and John E. Ball</p>
-      <p><em>IEEE SoutheastCon,  April 24</em>, 2024</p>
-      <p>Convolutional neural networks (CNNs) excel at extracting complex features from images,
-	but conventional CNNs process entire images uniformly, which can be inefficient since not
-	all regions are equally important. To address this, the Wavelet Convolutional Attention Module (WCAM) 
-	focuses CNNs on crucial features, using wavelets' multiresolution and sparsity to guide efficient
-	      downsampling without losing details.</p>
-    </div>
-  </div>  
+  </div>
+</section>
 	
 	
 <!-- Emerging Trends in Autonomous Vehicle Perception: Multimodal Fusion for 3D Object Detection  -->
@@ -354,45 +340,22 @@
   </section>
 
   <!-- Accomplishments Section -->
-  <section id="accomplishments" class="section">
-    <div class="container">
-      <h2>Accomplishments</h2>
-      <div class="accomplishment-list">
-        <div class="accomplishment-entry">
-          <p><strong>VOLUNTEER WORK</strong></p>
-          <p>
-            <strong>Science Fair Judge for high school students</strong>, Starkville, MS February 22, 2022, and March 7, 2023. <br>
-            <strong>Journal Reviewer</strong> January 2021 — Present
-            Serving as a reviewer for the IEEE Access journal, IEEE Sensors Journal, and IEEE Transactions on Intelligent Transportation Systems journal.
-          </p>
-        </div>
-        <div class="accomplishment-entry">
-          <p><strong>Recognized Works</strong></p>
-          <p>
-            Led a comprehensive workshop on image processing, machine learning, and deep learning for researchers and scientists from the United States Department of Agriculture (USDA).
-            The workshop took place from 10 to 14 January 2022. (Reference: <a href="https://www.gri.msstate.edu/research/ai-workshop/people.php">ECE news posted on Feb. 03, 2022</a>)
-            I conducted training on the Practical Atlas HPC application, focused on utilizing the Atlas GPU platform for deep learning applications, on June 08, 2022. <br>
-            <strong>Recognized works at university student research</strong>:
-            <a href="https://www.datascience.msstate.edu/research/student-research">(a) Class-Aware Fish Species Recognition Using Deep Learning for an Imbalanced Dataset</a>
-            (b) WabileNet: Wavelet-Based Lightweight Feature Extraction Network
-          </p>
-        </div>
-        <div class="accomplishment-entry">
-          <p><strong>Professional Memberships</strong></p>
-          <p>
-            <a href="#">IEEE Memberships</a><br>
-            <a href="#">IEEE-Eta Kappa Nu (HKN) Memberships</a>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+<section id="accomplishments" class="py-5">
+  <div class="container">
+    <h2 class="fw-bold border-bottom pb-2">Accomplishments</h2>
+    <ul class="list-unstyled">
+      <li><strong>Science Fair Judge</strong> for high school students, Starkville, MS, February 2022 & March 2023.</li>
+      <li><strong>Journal Reviewer</strong> for IEEE Access, IEEE Sensors Journal, and IEEE Transactions.</li>
+    </ul>
+  </div>
+</section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 Simegnew Yihunie Alaba. All rights reserved.</p>
-    </div>
-  </footer>
+<!-- Footer -->
+<footer class="footer py-4 text-center text-white">
+  <div class="container">
+    <p>&copy; 2025 Simegnew Yihunie Alaba. All rights reserved.</p>
+  </div>
+</footer>
+
 </body>
 </html>
