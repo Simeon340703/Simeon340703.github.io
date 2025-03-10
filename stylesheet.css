@@ -10,7 +10,7 @@ body {
   background: url("images/background.png") center/cover no-repeat, #d3d3d3; /* image */
   padding: 100px 0; /* Adjust padding for spacing */
   text-align: center;
-  color: black; /* Adjust text color for visibility */
+  color: white; /* Adjust text color for visibility */
 }
 
 /* Center the Profile Image Container */
