@@ -15,8 +15,8 @@ body {
 
 /* Center the Profile Image Container */
  .profile-image {
-            width: 200px; 
-            height: 200px; 
+            width: 150px; 
+            height: 150px; 
             border-radius: 50%; /* Makes the image circular */
             overflow: hidden; 
             border: 3px solid #ddd; /* Optional border */
@@ -26,6 +26,12 @@ body {
             justify-content: center; /* Ensures the image stays centered */
             align-items: center; /* Centers vertically */
         }
+.name {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffffff; /* #2c3e50; */
+}
+
 
 .email {
     font-style: italic;
