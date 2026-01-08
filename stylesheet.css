@@ -1,78 +1,904 @@
-/* General Styles */
+/* ========================================
+   COMPLETE PROFESSIONAL STYLESHEET
+   For GitHub Pages Portfolio
+   ======================================== */
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ========================================
+   CSS VARIABLES (Easy Theme Customization)
+   ======================================== */
+:root {
+  /* Primary Colors */
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --primary-light: #3b82f6;
+  --accent: #0ea5e9;
+  
+  /* Neutral Colors */
+  --dark: #1e293b;
+  --darker: #0f172a;
+  --light: #f8fafc;
+  --white: #ffffff;
+  --gray-100: #f1f5f9;
+  --gray-200: #e2e8f0;
+  --gray-300: #cbd5e1;
+  --gray-400: #94a3b8;
+  --gray-500: #64748b;
+  --gray-600: #475569;
+  --gray-700: #334155;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+  --shadow-md: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+  --shadow-lg: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
+  --shadow-xl: 0 25px 50px -12px rgba(0,0,0,0.25);
+  
+  /* Transitions */
+  --transition-fast: all 0.15s ease;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+}
+
+/* ========================================
+   RESET & BASE STYLES
+   ======================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  background-color: var(--light);
+  color: var(--dark);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
-/* Set gray background with custom image */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Text Selection */
+::selection {
+  background: rgba(37, 99, 235, 0.2);
+  color: var(--dark);
+}
+
+::-moz-selection {
+  background: rgba(37, 99, 235, 0.2);
+  color: var(--dark);
+}
+
+/* ========================================
+   HEADER SECTION
+   ======================================== */
 .header-section {
-  background: url("images/background.png") center/100% no-repeat, #d3d3d3; /* image */
-  padding: 100px 0; /* Adjust padding for spacing */
+  background: 
+    linear-gradient(135deg, rgba(30, 41, 59, 0.93) 0%, rgba(15, 23, 42, 0.9) 100%),
+    url("images/background.png") center/cover no-repeat fixed;
+  padding: 140px 20px 120px;
   text-align: center;
-   color: white;
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
 }
 
-.header-section .email {
-  color: white !important;
+/* Animated gradient overlay */
+.header-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(ellipse at 20% 50%, rgba(37, 99, 235, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 50%, rgba(14, 165, 233, 0.15) 0%, transparent 50%);
+  pointer-events: none;
+  animation: gradientShift 8s ease-in-out infinite alternate;
 }
 
-/* Ensure the profile image looks clean */
+@keyframes gradientShift {
+  0% { opacity: 0.5; transform: scale(1); }
+  100% { opacity: 1; transform: scale(1.1); }
+}
+
+/* Decorative shapes */
+.header-section::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(to top, var(--white) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+/* ========================================
+   PROFILE IMAGE
+   ======================================== */
+.profile-image {
+  position: relative;
+  z-index: 10;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
 .profile-image img {
-  width: 150px; /* Adjust size */
-  height: 150px;
+  width: 170px;
+  height: 170px;
   border-radius: 50%;
-  border: 4px solid white;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border: 5px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 
+    0 0 0 5px rgba(37, 99, 235, 0.3),
+    0 0 40px rgba(37, 99, 235, 0.2),
+    var(--shadow-xl);
+  object-fit: cover;
+  transition: var(--transition);
+  animation: fadeInDown 0.8s ease-out;
 }
 
+.profile-image img:hover {
+  transform: scale(1.08) rotate(2deg);
+  box-shadow: 
+    0 0 0 8px rgba(37, 99, 235, 0.4),
+    0 0 60px rgba(37, 99, 235, 0.3),
+    0 30px 40px -15px rgba(0, 0, 0, 0.3);
+}
+
+/* ========================================
+   NAME & EMAIL
+   ======================================== */
 .name {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #ffffff; /* #2c3e50; */
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--white);
+  margin: 0.5rem 0;
+  letter-spacing: -0.03em;
+  position: relative;
+  z-index: 10;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
 }
 
-
-.email {
-    font-style: italic;
-    color: #666;
+.email,
+.header-section .email {
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-style: normal;
+  font-size: 1.1rem;
+  font-weight: 400;
+  position: relative;
+  z-index: 10;
+  animation: fadeInUp 0.8s ease-out 0.3s both;
+  letter-spacing: 0.01em;
 }
 
-/* Social Links */
+.email a {
+  color: rgba(255, 255, 255, 0.9);
+  transition: var(--transition);
+}
+
+.email a:hover {
+  color: var(--accent);
+}
+
+/* ========================================
+   SOCIAL LINKS
+   ======================================== */
+.social-links {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 10;
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
 .social-links a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 0 10px;
-    font-size: 1rem;
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 0.6rem 1.4rem;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  overflow: hidden;
 }
 
+.social-links a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: var(--transition-slow);
+}
 
 .social-links a:hover {
-    text-decoration: underline;
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* About Section */
+.social-links a:hover::before {
+  left: 100%;
+}
+
+.social-links a:active {
+  transform: translateY(-1px);
+}
+
+/* Social Icons (if using Font Awesome or similar) */
+.social-links a i,
+.social-links a svg {
+  font-size: 1.1rem;
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+/* ========================================
+   MAIN CONTENT CONTAINER
+   ======================================== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ========================================
+   SECTION STYLES
+   ======================================== */
+section {
+  padding: 100px 0;
+  position: relative;
+}
+
+section:nth-child(even) {
+  background-color: var(--gray-100);
+}
+
+section:nth-child(odd) {
+  background-color: var(--white);
+}
+
+/* ========================================
+   ABOUT SECTION
+   ======================================== */
 .about-section {
-    background-color: #fcfcfa;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--gray-200);
 }
 
-.about-section h2 {
-    font-size: 2rem;
-    font-weight: bold;
+.about-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--gray-600);
+  max-width: 800px;
 }
 
-/* Research Section */
+/* ========================================
+   SECTION HEADINGS
+   ======================================== */
+.about-section h2,
+section h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+  letter-spacing: -0.02em;
+}
+
+section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 70px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  border-radius: var(--radius-full);
+}
+
+/* Centered heading variant */
+section.text-center h2::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Section subtitle */
+section .lead,
+section .subtitle {
+  font-size: 1.15rem;
+  color: var(--gray-500);
+  margin-bottom: 3rem;
+  max-width: 600px;
+}
+
+/* ========================================
+   CARDS (Research, Projects, etc.)
+   ======================================== */
+.card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-6px);
+  border-color: rgba(37, 99, 235, 0.3);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+.card-body {
+  padding: 1.75rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
 .card-title a {
-    color: #007bff;
-    text-decoration: none;
+  color: var(--dark);
+  text-decoration: none;
+  transition: var(--transition);
+  background: linear-gradient(90deg, var(--primary), var(--primary));
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
 }
 
 .card-title a:hover {
-    text-decoration: underline;
+  color: var(--primary);
+  background-size: 100% 2px;
 }
 
-/* Footer */
-.footer {
-    background-color: #2c3e50;
+.card-text {
+  color: var(--gray-500);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  flex-grow: 1;
 }
+
+.card-footer {
+  background: transparent;
+  border-top: 1px solid var(--gray-200);
+  padding: 1rem 1.75rem;
+}
+
+/* Card tags/badges */
+.card .badge,
+.card .tag {
+  display: inline-block;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: var(--radius-full);
+  background: var(--gray-100);
+  color: var(--gray-600);
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.card .badge.primary,
+.card .tag.primary {
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--primary);
+}
+
+/* ========================================
+   BUTTONS
+   ======================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: var(--white);
+  box-shadow: var(--shadow), 0 4px 14px rgba(37, 99, 235, 0.25);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg), 0 8px 20px rgba(37, 99, 235, 0.35);
+  color: var(--white);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.btn-outline:hover {
+  background: var(--primary);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: var(--gray-100);
+  color: var(--gray-700);
+}
+
+.btn-secondary:hover {
+  background: var(--gray-200);
+  transform: translateY(-2px);
+}
+
+/* ========================================
+   NAVIGATION (if applicable)
+   ======================================== */
+.navbar {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-sm);
+  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: var(--transition);
+}
+
+.navbar.scrolled {
+  box-shadow: var(--shadow);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--dark);
+}
+
+.nav-link {
+  color: var(--gray-600);
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: var(--transition);
+}
+
+.nav-link:hover {
+  color: var(--primary);
+}
+
+.nav-link.active {
+  color: var(--primary);
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+.footer {
+  background: linear-gradient(135deg, var(--dark) 0%, var(--darker) 100%);
+  color: rgba(255, 255, 255, 0.8);
+  padding: 4rem 0 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+}
+
+.footer h5 {
+  color: var(--white);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.footer p {
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.7;
+}
+
+.footer a {
+  color: rgba(255, 255, 255, 0.8);
+  transition: var(--transition);
+}
+
+.footer a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Footer social links */
+.footer .social-links {
+  animation: none;
+}
+
+.footer .social-links a {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer .social-links a:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Animation utility classes */
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-fade-in-down {
+  animation: fadeInDown 0.6s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.5s ease-out forwards;
+}
+
+/* Animation delays */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+
+/* ========================================
+   SCROLL ANIMATIONS (add .animate-on-scroll class)
+   ======================================== */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: var(--transition-slow);
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========================================
+   ACCESSIBILITY
+   ======================================== */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary);
+  color: var(--white);
+  padding: 1rem 2rem;
+  border-radius: var(--radius);
+  z-index: 9999;
+  transition: var(--transition);
+}
+
+.skip-link:focus {
+  top: 10px;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mt-4 { margin-top: 2rem; }
+.mt-5 { margin-top: 3rem; }
+
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+.mb-4 { margin-bottom: 2rem; }
+.mb-5 { margin-bottom: 3rem; }
+
+.py-1 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+.py-2 { padding-top: 1rem; padding-bottom: 1rem; }
+.py-3 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+.py-4 { padding-top: 2rem; padding-bottom: 2rem; }
+.py-5 { padding-top: 3rem; padding-bottom: 3rem; }
+
+.hidden { display: none; }
+.visible { visibility: visible; }
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* Tablets and smaller desktops */
+@media (max-width: 992px) {
+  .header-section {
+    padding: 120px 20px 100px;
+  }
+  
+  .name {
+    font-size: 2.5rem;
+  }
+  
+  section {
+    padding: 80px 0;
+  }
+  
+  section h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  .header-section {
+    padding: 100px 20px 80px;
+  }
+  
+  .profile-image img {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .name {
+    font-size: 2rem;
+  }
+  
+  .email {
+    font-size: 1rem;
+  }
+  
+  .social-links {
+    gap: 0.5rem;
+  }
+  
+  .social-links a {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+  
+  section {
+    padding: 60px 0;
+  }
+  
+  section h2 {
+    font-size: 1.75rem;
+  }
+  
+  .card-body {
+    padding: 1.25rem;
+  }
+  
+  .btn {
+    padding: 0.65rem 1.5rem;
+  }
+  
+  .footer {
+    padding: 3rem 0 1.5rem;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .header-section {
+    padding: 80px 15px 60px;
+  }
+  
+  .profile-image img {
+    width: 120px;
+    height: 120px;
+    border-width: 4px;
+  }
+  
+  .name {
+    font-size: 1.75rem;
+  }
+  
+  .social-links a {
+    padding: 0.45rem 0.9rem;
+    font-size: 0.8rem;
+  }
+  
+  section h2 {
+    font-size: 1.5rem;
+  }
+  
+  section h2::after {
+    width: 50px;
+    height: 3px;
+  }
+}
+
+/* ========================================
+   DARK MODE (Optional - uncomment to enable)
+   ======================================== */
+/*
+@media (prefers-color-scheme: dark) {
+  :root {
+    --light: #0f172a;
+    --white: #1e293b;
+    --dark: #f1f5f9;
+    --darker: #f8fafc;
+    --gray-100: #1e293b;
+    --gray-200: #334155;
+    --gray-500: #94a3b8;
+    --gray-600: #cbd5e1;
+  }
+  
+  body {
+    background-color: #0f172a;
+  }
+  
+  .card {
+    background: #1e293b;
+    border-color: #334155;
+  }
+  
+  section:nth-child(odd) {
+    background-color: #0f172a;
+  }
+  
+  section:nth-child(even) {
+    background-color: #1e293b;
+  }
+}
+*/
