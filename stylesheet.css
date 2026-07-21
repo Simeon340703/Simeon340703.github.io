@@ -812,6 +812,15 @@ section h2::after,
 }
 
 @media (max-width: 768px) {
+  /* Keep large sections and publication cards visible on mobile even if
+     the JavaScript reveal observer does not add the .visible class. */
+  section.reveal,
+  .publication-list.reveal,
+  .publication-card.reveal {
+    opacity: 1;
+    transform: none;
+  }
+
   html {
     scroll-padding-top: 120px;
   }
